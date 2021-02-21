@@ -15,7 +15,14 @@ namespace NS_DU1
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximumSize = this.Size;
+            this.MaximizeBox = false;
         }
 
+        private void selectInputFile(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+        }
     }
 }
