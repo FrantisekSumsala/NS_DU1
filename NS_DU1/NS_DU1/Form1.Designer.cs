@@ -31,35 +31,35 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialogButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.pauseButton = new System.Windows.Forms.Button();
+            this.stepButton = new System.Windows.Forms.Button();
+            this.inputFileNameLabel = new System.Windows.Forms.Label();
+            this.IterationNumberLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.weightsGrid = new System.Windows.Forms.DataGridView();
             this.WeightName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WeightValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WeightMinValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WeightMaxValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.learningRateInput = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.stepDisplayDurationInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.trainSetGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.testSetGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightsGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainSetGrid)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testSetGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -87,66 +87,66 @@
             this.openFileDialogButton.UseVisualStyleBackColor = true;
             this.openFileDialogButton.Click += new System.EventHandler(this.selectInputFile);
             // 
-            // button1
+            // startButton
             // 
-            this.button1.Location = new System.Drawing.Point(93, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startButton.Location = new System.Drawing.Point(93, 12);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.TabIndex = 2;
+            this.startButton.Text = "Start";
+            this.startButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // resetButton
             // 
-            this.button2.Location = new System.Drawing.Point(255, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
+            this.resetButton.Location = new System.Drawing.Point(255, 12);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 3;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // pauseButton
             // 
-            this.button3.Location = new System.Drawing.Point(174, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Pause";
-            this.button3.UseVisualStyleBackColor = true;
+            this.pauseButton.Location = new System.Drawing.Point(174, 12);
+            this.pauseButton.Name = "pauseButton";
+            this.pauseButton.Size = new System.Drawing.Size(75, 23);
+            this.pauseButton.TabIndex = 4;
+            this.pauseButton.Text = "Pause";
+            this.pauseButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // stepButton
             // 
-            this.button4.Location = new System.Drawing.Point(12, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Step";
-            this.button4.UseVisualStyleBackColor = true;
+            this.stepButton.Location = new System.Drawing.Point(12, 12);
+            this.stepButton.Name = "stepButton";
+            this.stepButton.Size = new System.Drawing.Size(75, 23);
+            this.stepButton.TabIndex = 5;
+            this.stepButton.Text = "Step";
+            this.stepButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // inputFileNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(450, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 15);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Currently selected input file: ungabunga.xml ";
+            this.inputFileNameLabel.AutoSize = true;
+            this.inputFileNameLabel.Location = new System.Drawing.Point(450, 16);
+            this.inputFileNameLabel.Name = "inputFileNameLabel";
+            this.inputFileNameLabel.Size = new System.Drawing.Size(245, 15);
+            this.inputFileNameLabel.TabIndex = 6;
+            this.inputFileNameLabel.Text = "Currently selected input file: ungabunga.xml ";
             // 
-            // label2
+            // IterationNumberLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Iteration number: 999";
+            this.IterationNumberLabel.AutoSize = true;
+            this.IterationNumberLabel.Location = new System.Drawing.Point(6, 22);
+            this.IterationNumberLabel.Name = "IterationNumberLabel";
+            this.IterationNumberLabel.Size = new System.Drawing.Size(120, 15);
+            this.IterationNumberLabel.TabIndex = 7;
+            this.IterationNumberLabel.Text = "Iteration number: 999";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.weightsGrid);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.learningRateInput);
+            this.groupBox1.Controls.Add(this.IterationNumberLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 41);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(609, 235);
@@ -154,23 +154,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Perceptron state";
             // 
-            // dataGridView1
+            // weightsGrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.weightsGrid.AllowUserToAddRows = false;
+            this.weightsGrid.AllowUserToDeleteRows = false;
+            this.weightsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.weightsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.WeightName,
             this.WeightValue,
             this.WeightMinValue,
             this.WeightMaxValue});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(597, 160);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.Text = "dataGridView1";
+            this.weightsGrid.Location = new System.Drawing.Point(6, 69);
+            this.weightsGrid.Name = "weightsGrid";
+            this.weightsGrid.ReadOnly = true;
+            this.weightsGrid.RowHeadersVisible = false;
+            this.weightsGrid.Size = new System.Drawing.Size(597, 160);
+            this.weightsGrid.TabIndex = 9;
+            this.weightsGrid.Text = "dataGridView1";
             // 
             // WeightName
             // 
@@ -205,16 +205,16 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Learning rate: ";
             // 
-            // textBox1
+            // learningRateInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 9;
+            this.learningRateInput.Location = new System.Drawing.Point(94, 40);
+            this.learningRateInput.Name = "learningRateInput";
+            this.learningRateInput.Size = new System.Drawing.Size(100, 23);
+            this.learningRateInput.TabIndex = 9;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.stepDisplayDurationInput);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Location = new System.Drawing.Point(627, 41);
@@ -224,12 +224,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Perceptron Vizualization";
             // 
-            // textBox2
+            // stepDisplayDurationInput
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 9;
+            this.stepDisplayDurationInput.Location = new System.Drawing.Point(163, 16);
+            this.stepDisplayDurationInput.Name = "stepDisplayDurationInput";
+            this.stepDisplayDurationInput.Size = new System.Drawing.Size(100, 23);
+            this.stepDisplayDurationInput.TabIndex = 9;
             // 
             // label5
             // 
@@ -242,7 +242,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView2);
+            this.groupBox3.Controls.Add(this.trainSetGrid);
             this.groupBox3.Location = new System.Drawing.Point(12, 282);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(609, 192);
@@ -250,21 +250,21 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Train Set";
             // 
-            // dataGridView2
+            // trainSetGrid
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 22);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(596, 160);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.Text = "dataGridView2";
+            this.trainSetGrid.AllowUserToAddRows = false;
+            this.trainSetGrid.AllowUserToDeleteRows = false;
+            this.trainSetGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.trainSetGrid.Location = new System.Drawing.Point(6, 22);
+            this.trainSetGrid.Name = "trainSetGrid";
+            this.trainSetGrid.ReadOnly = true;
+            this.trainSetGrid.Size = new System.Drawing.Size(596, 160);
+            this.trainSetGrid.TabIndex = 0;
+            this.trainSetGrid.Text = "dataGridView2";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView3);
+            this.groupBox4.Controls.Add(this.testSetGrid);
             this.groupBox4.Location = new System.Drawing.Point(12, 480);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(609, 189);
@@ -272,14 +272,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Test Set";
             // 
-            // dataGridView3
+            // testSetGrid
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 22);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(597, 160);
-            this.dataGridView3.TabIndex = 10;
-            this.dataGridView3.Text = "dataGridView3";
+            this.testSetGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.testSetGrid.Location = new System.Drawing.Point(6, 22);
+            this.testSetGrid.Name = "testSetGrid";
+            this.testSetGrid.Size = new System.Drawing.Size(597, 160);
+            this.testSetGrid.TabIndex = 10;
+            this.testSetGrid.Text = "dataGridView3";
             // 
             // Form1
             // 
@@ -290,24 +290,24 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.inputFileNameLabel);
+            this.Controls.Add(this.stepButton);
+            this.Controls.Add(this.pauseButton);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.startButton);
             this.Controls.Add(this.openFileDialogButton);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weightsGrid)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainSetGrid)).EndInit();
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testSetGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,27 +318,28 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button openFileDialogButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button pauseButton;
+        private System.Windows.Forms.Button stepButton;
+        private System.Windows.Forms.Label inputFileNameLabel;
+        private System.Windows.Forms.Label IterationNumberLabel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox learningRateInput;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView weightsGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightName;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightMinValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn WeightMaxValue;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView trainSetGrid;
+        private System.Windows.Forms.DataGridView testSetGrid;
+        private System.Windows.Forms.TextBox stepDisplayDurationInput;
         private System.Windows.Forms.Label label5;
+
     }
 }
 

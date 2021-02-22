@@ -17,7 +17,12 @@ namespace NS_DU1
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Model model = new Model();
+            Form1 view = new Form1(model);
+            Controller controller = new Controller(model, view);
+
+            Application.Run(view);
         }
     }
 }
