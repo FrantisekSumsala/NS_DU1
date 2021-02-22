@@ -41,9 +41,11 @@ namespace NS_DU1
                 InputFileSelected?.Invoke(openFileDialog1.FileName);
         }
 
+        internal void UpdateForNewAppState(Model model)
+        {
+            Model = model;
 
-
-
-
+            // change buttons
+        }
     }
 }
